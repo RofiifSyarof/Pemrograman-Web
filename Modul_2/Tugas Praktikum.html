@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas Praktikum</title>
+    <title>Tugas Praktikum Desain Laporan Berbasis Tabel</title>
 </head>
 <body>
+    <!-- Membuat tabel dengan menghapus pembatas terlebih dahulu lalu diberikan pembatas pada bagian atas tabel -->
     <table border="0" style="border-top:1px solid black" cellspacing="0" cellpadding="5">
         <caption>PERBANDINGAN FITUR</caption>
+        <!-- Membuat heading tabel dengan font rata tengah -->
         <tr align="center">
+            <!-- Membuat heading tabel dengan memberikan pembatas untuk tiap sel tabel kecuali untuk bagian paling kanan, kiri, dan pemisah kolom Pro dan Free -->
+            <!-- Pembatas atas tabel diberi tambahan satu pembatas lagi sehingga terlihat lebih tebal dibanding garis pembatas yang lain -->
+            <!-- Kolom Fitur diberi atribut width untuk memperluas bagian kolom -->
             <th style="border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black">No</th>
             <th width="150" style="border-top:1px solid black;border-bottom:1px solid black">Fitur</th>
             <th style="border:1px solid black;">Enterprise</th>
             <th style="border-top:1px solid black;border-bottom:1px solid black">Pro</th>
             <th style="border-top:1px solid black;border-bottom:1px solid black;">Free</th>
         </tr>
+        <!-- Membuat isi tabel dengan menambahkan garis pembatas di kanan kolom nomor dan di kanan dan kiri kolom Enterprise -->
+        <!-- Data kolom Enterprise diberikan perataan font rata tengah -->
         <tr>
             <td style="border-right:1px solid black">1</td>
             <td>Garansi seumur hidup</td>
@@ -45,6 +52,7 @@
             <td>-</td>
         </tr>
         <tr>
+            <!-- Memberikan pembatas di bawah baris data ke-5 untuk memisahkan baris ke-5 dengan baris ke-6 -->
             <td style="border-bottom:1px solid black;border-right:1px solid black">5</td>
             <td style="border-bottom:1px solid black;">Notifikasi error</td>
             <td align="center" style="border-bottom:1px solid black;border-left:1px solid black;border-right:1px solid black">X</td>
@@ -59,6 +67,7 @@
             <td>X</td>
         </tr>
         <tr>
+            <!-- Memberikan pembatas di bawah baris data ke-7 sebagai penutup tabel -->
             <td style="border-bottom:1px solid black;border-right:1px solid black">7</td>
             <td style="border-bottom:1px solid black;">Try ikon</td>
             <td align="center" style="border-bottom:1px solid black;border-left:1px solid black;border-right:1px solid black">X</td>
