@@ -11,26 +11,33 @@
         <table border="0">
         <caption><b>Studi Kasus: Validasi Input HTML5</b></caption>
             <tr>
+                <!-- Pada input nama diberikan atribut pattern a-z dan A-Z untuk membuat inputan hanya menerima huruf -->
                 <td>Nama</td>
                 <td>:<input type="text" size="25" pattern="[a-z A-Z]+" placeholder="Isikan Nama Anda" required></td>
             </tr>
             <tr>
+                <!-- Input usia menggunakan tipe data number karena usia hanya berupa angka -->
+                <!-- Atribut min dan mx ditambahkan karena input usia memiliki syarat hanya menerima usia 17-30 -->
                 <td>Usia</td>
                 <td>:<input type="number" min="17" max="30" required>(Usia min 17-30)</td>
             </tr>
             <tr>
+                <!-- Input data email menggunakan tipe data email -->
                 <td>Email</td>
                 <td>:<input type="email" size="25" placeholder="nama_email@host.com" required></td>
             </tr>
             <tr>
+                <!-- Input Web menggunakan tipe data url sehingga input hanya menerima data berbentuk url -->
                 <td>Web</td>
                 <td>:<input type="url" size="35" placeholder="http://" required></td>
             </tr>
             <tr>
+                <!-- Pada input untuk password diberikan atribut minlength karena syarat minimal memiliki delapan karakter -->
                 <td>Password</td>
                 <td>:<input type="text" minlength="8" placeholder="Semua karakter, min 8" required><b><i>(Bonus)</i></b></td>
             </tr>
             <tr>
+                <!-- Membuat tombol dengan tipe submit sebagai langkah terakhir mengumpul form setelah semua data terisi -->
                 <td></td>
                 <td>&nbsp<button type="submit">Submit</button></td>
             </tr>
