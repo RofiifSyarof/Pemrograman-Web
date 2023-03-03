@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Kasus Border</title>
+    <!-- Menggunakan CSS dengan pendekatan embedded -->
+    <style>
+        /* Membuat border lingkaran dengan pendekatan CSS3 */
+        .lingkaran {
+            width: 200px;
+            height: 200px;
+            background-color: #ddccb5;
+            -webkit-border-radius: 100%; /* Digunakan untuk membuat border pada browser Chrome dan Safari */
+            -moz-border-radius: 100%;   /* Digunakan untuk membuat border pada browser Firefox */
+            border: 2px solid #897048;
+            text-align: center;
+            vertical-align: middle;
+            display: table-cell;
+        }
+        /* Membuat border yang dua sudutnya melengkung dengan pendekatan CSS3 */
+        .border2 {
+            width: 250px;
+            height: 50px;
+            -webkit-border-top-left-radius: 20px;
+            -webkit-border-bottom-right-radius: 20px;
+            -moz-border-top-left-radius: 20px;
+            -moz-border-bottom-right-radius: 20px;
+            border: 3px solid #3bad1e;
+            vertical-align: middle;
+            display: table-cell;
+            padding: 0px 0px 0px 10px;
+        }
+        /* Membuat border dengan efek bayangan dengan pendekatan CSS3 */
+        .bayangan {
+            width: 250px;
+            height: 50px;
+            border: 2px solid #888888;
+            -webkit-box-shadow: 10px 10px 5px #888888;
+            -moz-box-shadow: 10px 10px 5px #888888;
+            box-shadow: 10px 10px 5px #888888;
+            text-align: center;
+            vertical-align: middle; 
+            display: table-cell;}
+    </style>
+</head>
+<body>
+    <div class="lingkaran">
+        Kreasi border lingkaran dengan pendekatan CSS3.
+    </div>
+    <br>
+    <div class="border2">
+        Kreasi border yang melengkung di sudutnya.
+    </div>
+    <br>
+    <div class="bayangan">
+        Kreasi border dengan efek seperti bayangan.
+    </div>  
+</body>
+</html>
