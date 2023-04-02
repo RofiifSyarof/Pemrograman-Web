@@ -1,0 +1,88 @@
+#__next, #root {
+    height: 100%;
+}
+.justify-center {
+    justify-content: center;
+}
+.text-center {
+    text-align: center;
+}
+.items-center {
+    align-items: center;
+}
+.flex {
+    display: flex;
+}
+.flex-col {
+    flex-direction: column;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-auto {
+    flex: 1 1 auto;
+}
+.w-96 {
+    width: 24rem;
+}
+.w-full {
+    width: 100%;
+}
+.h-full {
+    height: 100%;
+}
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+.mb-4 {
+    margin-bottom: 1rem;
+}
+.mb-5 {
+    margin-bottom: 1.25rem;
+}
+.mx-3 {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+.gap-2 {
+    gap: 0.5rem;
+}
+.gap-3 {
+    gap: 0.75rem;
+}
+.text-xs {
+    font-size: .75rem;
+    line-height: 1rem;
+}
+.py-3 {
+    padding-bottom: 0.75rem;
+    padding-top: 0.75rem;
+}
+.text-gray-500 {
+    --tw-text-opacity: 1;
+    color: rgba(142,142,160,var(--tw-text-opacity));
+}
+.text-gray-600 {
+    --tw-text-opacity: 1;
+    color: rgba(86,88,105,var(--tw-text-opacity));
+}
+.relative {
+    position: relative;
+}
+.btn {
+    align-items: center;
+    border-color: transparent;
+    border-radius: 0.25rem;
+    border-width: 1px;
+    display: inline-flex;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    pointer-events: auto;
+}
+.btn-primary {
+    --tw-bg-opacity: 1;
+    --tw-text-opacity: 1;
+    background-color: rgba(16,163,127,var(--tw-bg-opacity));
+    color: rgba(255,255,255,var(--tw-text-opacity));
+}
