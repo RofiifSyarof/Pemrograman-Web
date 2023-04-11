@@ -44,7 +44,7 @@
 ?>
 <br><br>
 <?php
-    //Menggunakan kotruksi bahasa isset()
+    //Menggunakan konstruksi bahasa isset()
     $var = "";
     var_dump($var);
     //output: string(0) ""
