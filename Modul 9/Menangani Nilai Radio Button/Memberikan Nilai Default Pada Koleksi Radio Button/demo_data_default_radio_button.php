@@ -15,5 +15,11 @@
         <input type="radio" name="sex" value="Anon" checked> Tidak Disebutkan <br>
         <input type="submit" value="OK">
     </form>
+
+<?php
+if (isset($_POST['sex'])) {
+    echo $_POST['sex'];
+}
+?>
 </body>
 </html>
