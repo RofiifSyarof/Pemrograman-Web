@@ -12,7 +12,7 @@
         <!-- Nilai default pada radio button dapat diberikan dengan menambahkan atribut checked pada elemen radio button -->
         <input type="radio" name="sex" value="Pria"> Pria
         <input type="radio" name="sex" value="Wanita"> Wanita 
-        <input type="radio" name="sex" value="Anon" checked> Tidak Disebutkan <br>
+        <input type="radio" name="sex" value="Tidak Disebutkan" checked> Tidak Disebutkan <br>
         <input type="submit" value="OK">
     </form>
 
