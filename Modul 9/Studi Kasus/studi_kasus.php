@@ -9,18 +9,20 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!-- javascript validation -->
 <script>
-    function validateForm() {
+    function validateForm() { //metode untuk validasi form
         var x = document.getElementById("username").value;
         var y = document.getElementById("password").value;
-        if (x == "" && y == "") {
+        if (x == "" && y == "") { //jika username dan password kosong
             alert("Username and Password must be filled out!");
             document.getElementById("username").focus();
             document.getElementById("username").select();
             return false;
         }
 
-        if (!/^[a-zA-Z]*$/g.test(x) && !/^[a-zA-Z]*$/g.test(y)) {
+        if (!/^[a-zA-Z]*$/g.test(x) && !/^[a-zA-Z]*$/g.test(y)) { //jika username dan password mengandung angka
             alert("Username and Password must be filled with alphabet only!");
             document.getElementById("username").focus();
             document.getElementById("username").select();
@@ -29,12 +31,14 @@
         return true;
     }
 </script>
+
 </head>
 <body>
     <div class="container-fluid">
         <img src="visualhunter-33fd8316d0.png" alt="icon">
         <p class="text-center">Welcome to ChatGPT <br>
         Log in with your OpenAI account to continue</p>
+        <!-- form login -->
         <form action="<?php $_SERVER['PHP_SELF'];?>" method="post" onsubmit="return validateForm()">
             <div class="form-group">
                 <label for="username">Username:</label>
@@ -48,11 +52,12 @@
         </form>
     </div>
 
+<!-- php code -->
 <?php
-    if (isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
+    if (isset($_REQUEST['username']) && isset($_REQUEST['password'])) { //jika username dan password terisi
         $username = $_REQUEST['username'];
         $password = $_REQUEST['password'];
-        if ($username == "Rofiif" && $password == "admin") {
+        if ($username == "Rofiif" && $password == "admin") { //jika username dan password benar
             echo "<h2 align=center><b>Welcome, " . $username . "!</b></h2>";
         } else {
             echo "<h2 align=center><b>Username or Password is incorrect!</b></h2>";
