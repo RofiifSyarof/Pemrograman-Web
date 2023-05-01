@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -30,8 +31,10 @@
 </script>
 </head>
 <body>
-    <div class="container">
-        <h2>Log In</h2>
+    <div class="container-fluid">
+        <img src="visualhunter-33fd8316d0.png" alt="icon">
+        <p class="text-center">Welcome to ChatGPT <br>
+        Log in with your OpenAI account to continue</p>
         <form action="<?php $_SERVER['PHP_SELF'];?>" method="post" onsubmit="return validateForm()">
             <div class="form-group">
                 <label for="username">Username:</label>
@@ -41,7 +44,7 @@
                 <label for="password">Password:</label>
                 <input type="text" class="form-control" placeholder="Enter password" id="password" name="password">
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button type="submit">Submit</button>
         </form>
     </div>
 
@@ -50,9 +53,9 @@
         $username = $_REQUEST['username'];
         $password = $_REQUEST['password'];
         if ($username == "Rofiif" && $password == "admin") {
-            echo "<h2>Welcome, " . $username . "!</h2>";
+            echo "<h2 align=center><b>Welcome, " . $username . "!</b></h2>";
         } else {
-            echo "<h2>Username or Password is incorrect!</h2>";
+            echo "<h2 align=center><b>Username or Password is incorrect!</b></h2>";
         }
     }
 ?>
