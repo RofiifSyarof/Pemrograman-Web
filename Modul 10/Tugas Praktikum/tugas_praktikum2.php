@@ -1,4 +1,4 @@
-<!-- Memeberikan session pada halaman web -->
+<!-- Memberikan session pada halaman web -->
 <?php
     session_start();
     if (isset($_SESSION['login'])) { //jika login sudah berhasil maka menampilkan isi session
