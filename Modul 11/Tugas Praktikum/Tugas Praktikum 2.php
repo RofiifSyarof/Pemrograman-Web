@@ -54,15 +54,15 @@ include 'koneksi.php'
                 <table class="table-responsive">
                     <tr>
                         <td>Nama</td>
-                        <td>: <input type="text" name="nama" required></td>
+                        <td>: <input type="text" name="nama" required style="color: rgba(0,0,0);"></td>
                     </tr>
                     <tr>
                         <td>Keluhan</td>
-                        <td>: <input type="text" name="keluhan" required></td>
+                        <td>: <input type="text" name="keluhan" required style="color: rgba(0,0,0);"></td>
                     </tr>
                     <tr>
                         <td>Alamat</td>
-                        <td>: <input type="text" name="alamat" required></td>
+                        <td>: <input type="text" name="alamat" required style="color: rgba(0,0,0);"></td>
                     </tr>
                     <tr>
                         <td></td>
