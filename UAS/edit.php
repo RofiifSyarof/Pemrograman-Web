@@ -21,6 +21,21 @@
             font-family: sans-serif;
             color: #CC6600;
         }
+        form {
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            border: 1px solid #CC6600;
+        }
+        h1 {
+            font-size: 40px;
+            font-weight: 600;
+            background: #CC6600;
+            border: 2px solid #984D02;
+            border-radius: 10px;
+            color: #fff;
+            padding: 10px;
+        }
         .container {
             border: 2px solid #984D02;
             border-radius: 10px;
@@ -29,9 +44,6 @@
             height: auto;
             padding: 20px;
             margin: 10px;
-        }
-        form {
-            margin-bottom: 10px;
         }
         .btn-success {
             float: right;

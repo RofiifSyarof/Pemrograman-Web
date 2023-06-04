@@ -62,7 +62,7 @@
             border: 2px solid #984D02;
             border-radius: 10px;
             background: #FFBB77;
-            width: 35%;
+            width: auto;
             height: auto;
             padding: 20px;
             margin: 10px;
@@ -168,8 +168,8 @@ include 'koneksi.php';
         }
         ?>
     </form>
-    <div class="viewTable">
-        <h2 class="text-center">Tabel Guru</h2>
+    <div class="viewTable text-center">
+        <h2>Tabel Guru</h2>
         <table class="table table-bordered">
             <tr>
                 <th>No</th>

@@ -23,7 +23,7 @@ if (isset($_POST['Login'])) {
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
             <style>
-                body {
+            body {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -34,6 +34,10 @@ if (isset($_POST['Login'])) {
                 height: 100vh;
                 font-family: sans-serif;
                 color: #CC6600;
+            }
+            h2 {
+                font-size: 30px;
+                font-weight: 600;
             }
             .container {
                 border: 2px solid #984D02;
@@ -119,10 +123,11 @@ if (isset($_POST['Login'])) {
                 padding: 20px;
                 margin: 10px;
             }
+            input[type=text], input[type=password] {
+                border: 1px solid #CC6600;
+            }
             .btn {
                 float: right;
-                background-color: #CC6600;
-                border-color: #984D02;
             }
         </style>
         <script>
@@ -150,7 +155,7 @@ if (isset($_POST['Login'])) {
     <body>
         <h1 class="text-center">WEBSITE MANAGEMENT DATA GURU</h1>
         <form action="<?php $_SERVER['PHP_SELF'];?>" method="post" onsubmit="return validateForm()">
-            <h2 class="text-center"><b>Login</b></h2>
+            <h2 class="text-center"><b>Log in</b></h2>
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" class="form-control" placeholder="Masukkan username" name="username" id="username" required>

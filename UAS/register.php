@@ -25,10 +25,7 @@
             font-size: 50px;
             font-weight: 600;
             margin-bottom: 20px;
-            background: #CC6600;
-            border: 2px solid #984D02;
-            border-radius: 10px;
-            color: #fff;
+            color: #CC6600;
             padding: 10px;
         }
         form {
@@ -42,8 +39,6 @@
         }
         .btn {
             float: right;
-            background-color: #CC6600;
-            border-color: #984D02;
         }
     </style>
     <script>
