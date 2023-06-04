@@ -1,10 +1,16 @@
 <?php
 session_start();
 
+$koneksi = mysqli_connect("localhost", "root", "", "db_prakweb") or die("Koneksi ke database gagal!");
+
 if (isset($_POST['Login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    if ($username == 'root' && $password == 'admin') {
+
+    $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+    $result = mysqli_query($koneksi, $query);
+    $row = mysqli_fetch_assoc($result);
+    if ($row) {
         $_SESSION['login'] = $username;
         ?>
         <!DOCTYPE html>
@@ -55,7 +61,7 @@ if (isset($_POST['Login'])) {
         </head>
         <body>
             <div class="text-center container">
-                <h2>Selamat Datang!</h2><br>
+                <h2>Selamat Datang, <?php echo $row['nama'];  ?>!</h2><br>
                 <h3>Silakan pilih menu di bawah ini untuk melanjutkan...</h3><br>
                 <button class="btn btn-primary" onclick="window.location.href='dashboard.php'">Dashboard</button>
                 <button class="btn btn-danger" onclick="logout()">Log Out</button>
@@ -63,28 +69,12 @@ if (isset($_POST['Login'])) {
         </body>
         </html>
     <?php } else {
-        if ($username != 'root' && $password != 'admin') {
-            ?>
-            <script>
-                alert('Username dan Password salah!'); 
-                document.location.href='login.php';
-            </script>
-        <?php
-        } else if ($username != 'root') {
-            ?>
-            <script>
-                alert('Username salah!'); 
-                document.location.href='login.php';
-            </script>
-        <?php
-        } else if ($password != 'admin') {
-            ?>
-            <script>
-                alert('Password salah!'); 
-                document.location.href='login.php';
-            </script>
-        <?php
-        }
+        ?>
+        <script>
+        alert('Username atau Password salah!'); 
+        document.location.href='login.php';
+        </script>
+    <?php
     }
 } else {
     ?>
@@ -125,7 +115,7 @@ if (isset($_POST['Login'])) {
                 border-radius: 10px;
                 background: #FFBB77;
                 width: 25%;
-                height: 40%;
+                height: auto;
                 padding: 20px;
                 margin: 10px;
             }
@@ -163,13 +153,15 @@ if (isset($_POST['Login'])) {
             <h2 class="text-center"><b>Login</b></h2>
             <div class="form-group">
                 <label for="username">Username:</label>
-                <input type="text" class="form-control" name="username" id="username" required>
+                <input type="text" class="form-control" placeholder="Masukkan username" name="username" id="username" required>
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" class="form-control" name="password" id="password" required>
+                <input type="password" class="form-control" placeholder="Masukkan password" name="password" id="password" required>
             </div>
             <button class="btn btn-primary" type="submit" name="Login">Submit</button>
+            Belum punya akun? <br>
+            <a href="register.php">Daftar di sini</a>
         </form>
     </body>
     </html>

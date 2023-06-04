@@ -26,7 +26,7 @@
             border-radius: 10px;
             background: #FFBB77;
             width: 35%;
-            height: 50%;
+            height: auto;
             padding: 20px;
             margin: 10px;
         }
