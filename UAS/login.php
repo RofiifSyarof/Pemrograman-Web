@@ -114,6 +114,11 @@ if (isset($_POST['Login'])) {
                 color: #fff;
                 padding: 10px;
             }
+            h2 {
+                font-size: 30px;
+                font-weight: 600;
+                margin-top: 0px;
+            }
             form {
                 border: 2px solid #984D02;
                 border-radius: 10px;
