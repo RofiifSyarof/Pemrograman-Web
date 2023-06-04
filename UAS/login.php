@@ -16,6 +16,33 @@ if (isset($_POST['Login'])) {
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+            <style>
+                body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-image: url("education-learning-concept-with-opening-book-textbook-old-library.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100vh;
+                font-family: sans-serif;
+                color: #CC6600;
+            }
+            .container {
+                border: 2px solid #984D02;
+                border-radius: 10px;
+                background: #FFBB77;
+                width: 25%;
+                height: 40%;
+                padding: 20px;
+                margin: 10px;
+            }
+            .btn {
+                align-items: center;
+                margin: 10px;
+            }
+            </style>
             <script>
                 function logout() {
                     var result = confirm("Apakah Anda yakin ingin Log Out?")
@@ -27,10 +54,12 @@ if (isset($_POST['Login'])) {
             <title>Login Page</title>
         </head>
         <body>
-            <h2>Selamat Datang!</h2>
-            <h3>Silakan pilih menu di bawah ini untuk melanjutkan...</h3>
-            <a href="dashboard.php">Dashboard</a>
-            <a href="#" onclick="logout()">Logout</a>
+            <div class="text-center container">
+                <h2>Selamat Datang!</h2><br>
+                <h3>Silakan pilih menu di bawah ini untuk melanjutkan...</h3><br>
+                <button class="btn btn-primary" onclick="window.location.href='dashboard.php'">Dashboard</button>
+                <button class="btn btn-danger" onclick="logout()">Log Out</button>
+            </div>
         </body>
         </html>
     <?php } else {
@@ -68,6 +97,44 @@ if (isset($_POST['Login'])) {
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-image: url("education-learning-concept-with-opening-book-textbook-old-library.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100vh;
+                font-family: sans-serif;
+                color: #CC6600;
+            }
+            h1 {
+                font-size: 50px;
+                font-weight: 600;
+                margin-bottom: 20px;
+                background: #CC6600;
+                border: 2px solid #984D02;
+                border-radius: 10px;
+                color: #fff;
+                padding: 10px;
+            }
+            form {
+                border: 2px solid #984D02;
+                border-radius: 10px;
+                background: #FFBB77;
+                width: 25%;
+                height: 40%;
+                padding: 20px;
+                margin: 10px;
+            }
+            .btn {
+                float: right;
+                background-color: #CC6600;
+                border-color: #984D02;
+            }
+        </style>
         <script>
             function validateForm() { //metode untuk validasi form
                 var x = document.getElementById("username").value;
@@ -91,7 +158,9 @@ if (isset($_POST['Login'])) {
         <title>Login Page</title>
     </head>
     <body>
+        <h1 class="text-center">WEBSITE MANAGEMENT DATA GURU</h1>
         <form action="<?php $_SERVER['PHP_SELF'];?>" method="post" onsubmit="return validateForm()">
+            <h2 class="text-center"><b>Login</b></h2>
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" class="form-control" name="username" id="username" required>

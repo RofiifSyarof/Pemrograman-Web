@@ -4,7 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Dashboard</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url("education-learning-concept-with-opening-book-textbook-old-library.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            font-family: sans-serif;
+            color: #CC6600;
+        }
+        h1 {
+            font-size: 50px;
+            font-weight: 600;
+            margin-top: 100px;
+            background: #CC6600;
+            border: 2px solid #984D02;
+            border-radius: 10px;
+            color: #fff;
+            padding: 10px;
+        }
+        h2 {
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            background: #CC6600;
+            border: 2px solid #984D02;
+            border-radius: 10px;
+            color: #fff;
+            padding: 10px;
+        }
+        form {
+            border: 2px solid #984D02;
+            border-radius: 10px;
+            background: #FFBB77;
+            width: 35%;
+            height: 50%;
+            padding: 20px;
+            margin: 10px;
+        }
+        input[type=text],
+        select {
+            border: 1px solid #984D02;
+        }
+        .viewTable {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #984D02;
+            border-radius: 10px;
+            background: #FFBB77;
+            width: 35%;
+            height: auto;
+            padding: 20px;
+            margin: 10px;
+            color: black;
+        }
+        .table-bordered {
+            border: 2px solid #984D02;
+            background: #FFBB77;
+            width: 100%;
+            padding: 20px;
+            border-collapse: collapse;
+        }
+        .table-bordered th {
+            border-color: #984D02;
+        }
+        .btn {
+            padding: 10px;
+        }
+        .btn-success {
+            float: right;
+        }
+    </style>
     <script>
         function hapus(nip) {
             var konfirmasi = confirm("Apakah anda yakin ingin menghapus data ini?");
@@ -12,6 +92,12 @@
                 window.location.href = "hapus.php?nip=" + nip;
             } else {
                 return false;
+            }
+        }
+        function logout() {
+            var result = confirm("Apakah anda yakin ingin keluar?");
+            if (result) {
+                window.location.href = "logout.php";
             }
         }
     </script>
@@ -22,24 +108,25 @@ include 'koneksi.php';
 ?>
 
 <body>
-    <h3>Data Guru</h3>
-    <h5>Menambahkan data guru</h5>
-    <form action="" method="post">
-        <table>
-            <tr>
-                <td>NIP</td>
-                <td>:</td>
-                <td><input type="text" pattern="[0-9]+" name="nip" required></td>
-            </tr>
-            <tr>
-                <td>Nama</td>
-                <td>:</td>
-                <td><input type="text" pattern="[a-z A-Z]+" name="nama" required></td>
-            </tr>
-            <tr>
-                <td>Mata Pelajaran</td>
-                <td>:</td>
-                <td><select name="mapel">
+    <h1>DATA GURU</h1>
+    <form class="form-horizontal" action="" method="post">
+        <h2 class="text-center">Menambahkan Data Guru</h2>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="nip">NIP:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="nip" placeholder="Masukkan NIP" name="nip" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="nama">Nama:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama" name="nama" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="mapel">Mata Pelajaran:</label>
+            <div class="col-sm-10">
+                <select name="mapel">
                     <option value="Matematika">Matematika</option>
                     <option value="Bahasa Indonesia">Bahasa Indonesia</option>
                     <option value="Bahasa Inggris">Bahasa Inggris</option>
@@ -50,18 +137,19 @@ include 'koneksi.php';
                     <option value="Geografi">Geografi</option>
                     <option value="Ekonomi">Ekonomi</option>
                     <option value="Sosiologi">Sosiologi</option>
-                </select></td>
-            <tr>
-                <td>Alamat</td>
-                <td>:</td>
-                <td><input type="text" name="alamat" required></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td><input type="submit" value="Tambah" name="tambah"></td>
-            </tr>
-        </table>
+                    <option value="Seni Budaya">Seni Budaya</option>
+                    <option value="Pendidikan Jasmani">Pendidikan Jasmani</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="alamat">Alamat:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="alamat" placeholder="Masukkan Alamat" name="alamat" required>
+            </div> 
+        </div>
+        <button type="submit" class="btn btn-success" name="tambah">Tambah</button>
+        <button class="btn btn-danger" onclick="logout()">Log Out</button>
         <?php
         if (isset($_POST['tambah'])) {
             $nip = $_POST['nip'];
@@ -80,37 +168,39 @@ include 'koneksi.php';
         }
         ?>
     </form>
-    <h5>Tabel Guru</h5>
-    <table border="1">
-        <tr>
-            <th>No</th>
-            <th>NIP</th>
-            <th>Nama</th>
-            <th>Mata Pelajaran</th>
-            <th>Alamat</th>
-            <th>Aksi</th>
-        </tr>
-        <?php
-        $sql = "SELECT * FROM guru";
-        $query = mysqli_query($koneksi, $sql);
-
-        $no = 1;
-        while ($data = mysqli_fetch_array($query)) {
-        ?>
+    <div class="viewTable">
+        <h2 class="text-center">Tabel Guru</h2>
+        <table class="table table-bordered">
             <tr>
-                <td><?php echo $no++; ?></td>
-                <td><?php echo $data['nip']; ?></td>
-                <td><?php echo $data['nama']; ?></td>
-                <td><?php echo $data['mapel']; ?></td>
-                <td><?php echo $data['alamat']; ?></td>
-                <td>
-                    <a href="edit.php?nip=<?php echo $data['nip']; ?>">Edit</a>
-                    <a href="#" onclick="hapus('<?php echo $data['nip']; ?>')">Hapus</a>
-                </td>
+                <th>No</th>
+                <th>NIP</th>
+                <th>Nama</th>
+                <th>Mata Pelajaran</th>
+                <th>Alamat</th>
+                <th>Aksi</th>
             </tr>
-        <?php
-        }
-        ?>
-    </table>
+            <?php
+            $sql = "SELECT * FROM guru";
+            $query = mysqli_query($koneksi, $sql);
+
+            $no = 1;
+            while ($data = mysqli_fetch_array($query)) {
+            ?>
+                <tr>
+                    <td><?php echo $no++; ?></td>
+                    <td><?php echo $data['nip']; ?></td>
+                    <td><?php echo $data['nama']; ?></td>
+                    <td><?php echo $data['mapel']; ?></td>
+                    <td><?php echo $data['alamat']; ?></td>
+                    <td>
+                        <button class="btn btn-primary" onclick="location.href='edit.php?nip=<?php echo $data['nip']; ?>'">Edit</button>
+                        <button class="btn btn-danger" onclick="hapus('<?php echo $data['nip']; ?>')">Hapus</button>
+                    </td>
+                </tr>
+            <?php
+            }
+            ?>
+        </table>
+    </div>
 </body>
 </html>
