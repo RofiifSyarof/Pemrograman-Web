@@ -24,6 +24,7 @@
         h1 {
             font-size: 50px;
             font-weight: 600;
+            margin-top: 0px;
             margin-bottom: 20px;
             color: #CC6600;
             padding: 10px;
